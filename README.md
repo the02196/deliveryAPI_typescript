@@ -1,46 +1,24 @@
-# Getting Started with Create React App
+# 타입스크립트와 스마트 택배 API를 활용한 배송 조회 서비스
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 구현 배경
 
-In the project directory, you can run:
+데이터의 자료형을 명시하여, 정확한 데이터의 입출력으로 버그 방지하는 것은 타입스크립트의 수많은 장점 중 하나입니다. 이를 적극적으로 활용해 볼 수 있는 서비스를 개발하기 위해, 스마트 택배 API를 활용한 택배 조회 서비스를 구현해보았습니다.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 사용한 기술들
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### map문
 
-### `npm test`
+배송 정보를 추적하며 분기에 따라 업데이트 되는 json을 가져와, 맵문을 활용하여 출력하였습니다. 사용자가 최신 배송 정보를 최상단에서 볼 수 있도록, slice().reverse()를 활용하여 배열을 뒤집고, 변경된 인덱스 값에 맞춰 CSS 적용 조건 설정을 업데이트 했습니다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### async와 await
+순차적으로 함수를 실행하여, 데이터를 읽고 출력하는 과정에서 생길 수 있는 `undefined(값이 할당되지 않음)` 버그를 미연에 방지했습니다.
 
-### `npm run build`
+### {theme}과 json
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+사용자가 페이지의 디자인을 자신의 취향대로 커스터마이징 할 수 있도록, 디자인 설정이 들어있는 json을 생성하여 조건부로 출력했습니다.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### type과 interface를 활용한 타입 설정
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+데이터의 입출력시, 발생할 수 있는 타입 버그를 미연에 방지하기 위해 서비스를 위해 이용되는 모든 프로퍼티에 타입을 설정했습니다.
