@@ -1,5 +1,10 @@
 # 타입스크립트와 스마트 택배 API를 활용한 배송 조회 서비스
 
+<img style="width: 100%;" src="./parcel.png" alt="photo" />
+
+## 배포 링크
+
+https://delivery-api-typescript.vercel.app
 
 ## 구현 배경
 
