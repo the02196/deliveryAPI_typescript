@@ -4,6 +4,7 @@
 
 ## 배포 링크
 
+(현재 배포 이후 데이터 출력이 제대로 되지 않는 버그를 수정 중입니다.)
 https://delivery-api-typescript.vercel.app
 
 ## 구현 배경
